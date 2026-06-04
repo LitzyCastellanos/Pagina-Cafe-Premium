@@ -47,6 +47,10 @@
 </p>
 
 ---
+## Sitio en producción
+- Accede al catálogo digital de Café Premium Copán aquí:
+- 👉 https://03baa2fa.pagina-cafe-premium.pages.dev/
+
 
 ## Table of Contents 📋
 
