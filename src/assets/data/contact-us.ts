@@ -9,7 +9,7 @@ export const contactInfo = [
   {
     title: 'Nuestra Dirección',
     icon: MapPinIcon,
-    description: 'La Esperanza, Intibucá, Honduras'
+    description: 'Copán, Honduras\nBarrio El Centro'
   },
   {
     title: 'Email',
