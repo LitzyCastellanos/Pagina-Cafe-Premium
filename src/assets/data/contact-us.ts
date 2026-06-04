@@ -2,12 +2,12 @@ import { Clock8Icon, MapPinIcon, Mail, PhoneIcon } from 'lucide-react'
 
 export const contactInfo = [
   {
-    title: 'Open Hours',
+    title: 'Horario',
     icon: Clock8Icon,
-    description: 'Monday-Friday\n8:00 am to 5:00 pm'
+    description: 'Lunes-Viernes\n8:00 am a 6:00 pm'
   },
   {
-    title: 'Our Address',
+    title: 'Nuestra Dirección',
     icon: MapPinIcon,
     description: 'La Esperanza, Intibucá, Honduras'
   },
@@ -17,7 +17,7 @@ export const contactInfo = [
     description: 'cafepremium@gmail.com'
   },
   {
-    title: 'Phone',
+    title: 'Teléfono',
     icon: PhoneIcon,
     description: '+504 3218-0967'
   }

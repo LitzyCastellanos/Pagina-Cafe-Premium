@@ -23,9 +23,9 @@ export const footerData = [
 
 export const footerContact = {
   address: 'Barrio El Centro, Santa Rosa de Copán',
-  phone: '2662-XXXX',
+  phone: '2662-1234',
   schedule: 'Lun-Vie 8am - 6pm',
-  whatsapp: '50498765432'
+  whatsapp: '50432180967'
 }
 
 export const footerSocials = [

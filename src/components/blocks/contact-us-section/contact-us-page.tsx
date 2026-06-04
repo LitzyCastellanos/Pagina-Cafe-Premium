@@ -19,14 +19,13 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='mx-auto mb-12 flex max-w-2xl flex-col items-center justify-center space-y-4 text-center sm:mb-16 lg:mb-24'>
-          <Badge variant='outline' className='text-sm font-normal'>
-            Contact Us
-          </Badge>
-          <h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Get in touch with us </h2>
-          <p className='text-muted-foreground text-xl'>
-            We eagerly look forward to warmly welcoming you very soon to our event. It promises to be a memorable
-            experience filled with exciting activities.
-          </p>
+         <Badge variant='outline' className='text-sm font-normal'>
+  Contacto
+</Badge>
+<h2 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>Contáctanos</h2>
+<p className='text-muted-foreground text-xl'>
+  Estamos listos para atenderte. Si tienes preguntas sobre nuestros productos, pedidos o distribución, escríbenos.
+</p>
         </div>
 
         <div className='grid items-center gap-12 lg:grid-cols-2'>
@@ -38,11 +37,10 @@ const ContactUs = ({ contactInfo }: { contactInfo: ContactInfo }) => {
           />
 
           <div>
-            <h3 className='mb-2 text-2xl'>We&apos;re here to serve you</h3>
-            <p className='text-muted-foreground mb-10 text-lg'>
-              We would love to hear from you, Whether you have a question, need a reservation, or want to learn more
-              about our offerings, we&apos;re here to assist.
-            </p>
+           <h3 className='mb-2 text-2xl'>Estamos aquí para servirte</h3>
+<p className='text-muted-foreground mb-10 text-lg'>
+  Nos encantaría saber de ti. Ya sea que tengas una pregunta sobre nuestro café, quieras hacer un pedido o conocer más sobre nuestras fincas, estamos aquí para ayudarte.
+</p>
 
             {/* Contact Info Grid */}
             <div className='grid gap-6 sm:grid-cols-2'>

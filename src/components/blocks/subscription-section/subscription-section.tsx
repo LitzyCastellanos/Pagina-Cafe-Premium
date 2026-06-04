@@ -52,10 +52,13 @@ const plans = [
 const SubscriptionSection = () => {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
 
-  const handleSubscribe = (planName: string) => {
-    const message = `Hola, quiero suscribirme al plan ${planName} de Café Premium Copán`
+  const handleSelectPlan = (planName: string) => {
+    setSelectedPlan(planName)
 
-    window.location.href = `https://wa.me/50498765432?text=${encodeURIComponent(message)}`
+    // Solo muestra un mensaje o hace scroll, sin redirigir
+    setTimeout(() => {
+      alert(`¡Has seleccionado el plan ${planName}! Contáctanos para completar tu suscripción.`)
+    }, 100)
   }
 
   return (
@@ -74,9 +77,9 @@ const SubscriptionSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-xl border p-6 relative bg-card text-card-foreground ${
-  plan.recommended ? 'border-primary shadow-lg scale-105' : ''
-}`}
+              className={`rounded-xl border p-6 relative bg-card text-card-foreground transition-all duration-300 ${
+                plan.recommended ? 'border-primary shadow-lg scale-105' : ''
+              } ${selectedPlan === plan.name ? 'ring-2 ring-primary ring-offset-2' : ''}`}
             >
               {plan.recommended && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">
@@ -103,13 +106,23 @@ const SubscriptionSection = () => {
               <Button
                 className="w-full rounded-full"
                 variant={plan.recommended ? 'default' : 'outline'}
-                onClick={() => handleSubscribe(plan.name)}
+                onClick={() => handleSelectPlan(plan.name)}
               >
-                Suscribirme
+                {selectedPlan === plan.name ? '✓ Plan seleccionado' : 'Seleccionar plan'}
               </Button>
             </div>
           ))}
         </div>
+
+        {/* Mensaje cuando se selecciona un plan */}
+        {selectedPlan && (
+          <div className="mt-8 p-4 bg-primary/10 rounded-lg text-center">
+            <p className="text-primary">
+              Has seleccionado el plan <strong>{selectedPlan}</strong>.
+              Para más información, contáctanos.
+            </p>
+          </div>
+        )}
 
         <div className="mt-12 text-center">
           <div className="flex justify-center gap-8 flex-wrap">

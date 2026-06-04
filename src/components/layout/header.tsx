@@ -100,7 +100,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
         <div className='hidden xl:flex shrink-0 items-center gap-3'>
           <div className='flex items-center gap-1.5 text-xs text-muted-foreground whitespace-nowrap'>
             <PhoneIcon className='size-3 text-primary' />
-            <span>2662-XXXX</span>
+            <span>2662-1234</span>
           </div>
           <div className='h-3 w-px bg-border' />
           <div className='flex items-center gap-1.5 text-xs text-muted-foreground whitespace-nowrap'>
