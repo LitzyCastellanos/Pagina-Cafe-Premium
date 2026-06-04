@@ -1,24 +1,26 @@
-import { Trophy, SparklesIcon, Users, ChefHat } from 'lucide-react'
+// src/assets/data/about-us.ts
+
+import { CoffeeIcon, LeafIcon, UsersIcon, AwardIcon } from 'lucide-react'
 
 export const stats = [
   {
-    icon: SparklesIcon,
-    value: '20+',
-    description: ['Years of Culinary', 'Expertise']
+    icon: CoffeeIcon,
+    value: '10+',
+    description: ['Años cultivando', 'café de especialidad']
   },
   {
-    icon: ChefHat,
-    value: '70+',
-    description: ['Signature Dishes', 'Perfected']
+    icon: LeafIcon,
+    value: '30+',
+    description: ['Familias productoras', 'aliadas']
   },
   {
-    icon: Users,
-    value: '500+',
-    description: ['Happy Guests', 'Every Month']
+    icon: UsersIcon,
+    value: '1200+',
+    description: ['Clientes satisfechos', 'cada mes']
   },
   {
-    icon: Trophy,
-    value: '25',
-    description: ['Prestigious', 'Culinary Awards']
+    icon: AwardIcon,
+    value: '5',
+    description: ['Premios nacionales', 'e internacionales']
   }
 ]

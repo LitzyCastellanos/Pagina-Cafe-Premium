@@ -1,26 +1,39 @@
+// src/assets/data/new-items.ts
+
 export const newItems = [
   {
-    img: '/images/new-items/new-items-01.webp',
-    alt: 'Lemon Herb Grilled Salmon',
-    title: 'Lemon Herb Grilled Salmon',
+    img: '/images/ediciones/geisha-copan-2026.webp',
+    alt: 'Geisha Copán 2026 - Café de especialidad',
+    title: 'Geisha Copán 2026',
     description:
-      'Delight in the perfect balance of zesty lemon and savoury herbs, beautifully paired with a fresh garden salad.',
+      'La variedad más exclusiva del mundo, cultivada en Copán. Notas de jazmín, té verde y bergamota. Cosecha limitada a solo 100 bolsas numeradas.',
+    price: '$39.99',
+    stock: '12 disponibles',
     blogLink: '#'
   },
   {
-    img: '/images/new-items/new-items-02.webp',
-    alt: 'Spicy Mango Chicken',
-    title: 'Spicy Mango Chicken',
+    img: '/images/ediciones/microlote-el-paraiso.webp',
+    alt: 'Micro-Lote El Paraíso - Café de origen único',
+    title: 'Micro-Lote El Paraíso',
     description:
-      'A sweet and spicy fusion of tender chicken breast combined with ripe mango and a delightful chili kick.',
+      'Café de una sola finca ubicada a 1,700 msnm. Notas de durazno, caramelo y nuez moscada. Puntuación SCA: 88 puntos.',
+    price: '$24.99',
+    stock: 'Agotado',
     blogLink: '#'
   },
   {
-    img: '/images/new-items/new-items-03.webp',
-    alt: 'Vegetarian Tempeh Stir Fry',
-    title: 'Vegetarian Tempeh Stir Fry',
+    img: '/images/ediciones/navideno-2025.webp',
+    alt: 'Edición Navideña 2025 - Café de temporada',
+    title: 'Edición Navideña 2025',
     description:
-      'A healthy, hearty and nutritious dish featuring tempeh, fresh seasonal vegetables, and a light, flavourful sauce.',
+      'Sabores de temporada: canela, naranja y chocolate oscuro. Perfecto para compartir en familia durante las fiestas.',
+    price: '$19.99',
+    stock: '8 disponibles',
     blogLink: '#'
   }
 ]
+
+// También puedes agregar una función para obtener solo los que están en stock
+export const getAvailableEditions = () => {
+  return newItems.filter(item => item.stock !== 'Agotado')
+}

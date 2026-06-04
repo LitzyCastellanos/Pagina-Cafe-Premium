@@ -1,18 +1,40 @@
 export const footerData = [
   {
-    title: 'About Us',
-    href: '#about-us'
+    title: 'Inicio',
+    href: '#inicio'
   },
   {
-    title: 'Testimonials',
-    href: '#testimonials'
+    title: 'Catálogo',
+    href: '#granos'
   },
   {
-    title: 'Contact Us',
-    href: '#contact-us'
+    title: 'Ediciones Especiales',
+    href: '#ediciones'
   },
   {
-    title: 'Offers',
-    href: '#offers'
+    title: 'Suscripción',
+    href: '#suscripcion'
+  },
+  {
+    title: 'Contacto',
+    href: '#contacto'
+  }
+]
+
+export const footerContact = {
+  address: 'Barrio El Centro, Santa Rosa de Copán',
+  phone: '2662-XXXX',
+  schedule: 'Lun-Vie 8am - 6pm',
+  whatsapp: '50498765432'
+}
+
+export const footerSocials = [
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/cafepremiumcopan',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/cafepremiumcopan',
   }
 ]

@@ -9,16 +9,16 @@ export const contactInfo = [
   {
     title: 'Our Address',
     icon: MapPinIcon,
-    description: '802 Perston Rd,Maine\n96812, USA'
+    description: 'La Esperanza, Intibucá, Honduras'
   },
   {
     title: 'Email',
     icon: Mail,
-    description: 'info@seliziakitchen.com'
+    description: 'cafepremium@gmail.com'
   },
   {
     title: 'Phone',
     icon: PhoneIcon,
-    description: '+1 (123) 456-7890'
+    description: '+504 3218-0967'
   }
 ]

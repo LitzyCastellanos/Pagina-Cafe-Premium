@@ -3,51 +3,102 @@ import Layout from '@/layouts/Layout.astro'
 import HeroSectionPage from '@/components/blocks/hero-section/hero-section'
 import PopularDishes from '@/components/blocks/popular-dishes/popular-dishes'
 import AboutUs from '@/components/blocks/about-us-section/about-us-page'
-import Testimonials from '@/components/blocks/testimonials-section/testimonials-section'
-import NewItems from '@/components/blocks/new-items-section/new-items'
+
 import ContactUs from '@/components/blocks/contact-us-section/contact-us-page'
-import Offers from '@/components/blocks/offers-section/offers-section'
+import SubscriptionSection from '@/components/blocks/subscription-section/subscription-section'
+import ShippingCalculator from '@/components/blocks/shipping-calculator/shipping-calculator'
+import Distribuidores from '@/components/blocks/distribuidores/distribuidores'
 
 import { menudata } from '@/assets/data/hero'
-import { popularDishes } from '@/assets/data/popular-dishes'
+import { popularDishes, granos, moliendas, edicionesEspeciales } from '@/assets/data/popular-dishes'
 import { stats } from '@/assets/data/about-us'
-import { testimonials } from '@/assets/data/testimonials'
-import { newItems } from '@/assets/data/new-items'
 import { contactInfo } from '@/assets/data/contact-us'
-import { GalleryImage } from '@/assets/data/offers'
 
-// Page-specific SEO configuration
-const pageTitle = ''
-const pageDescription =
-  'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
-const pageKeywords = 'astro template, shadcn ui, tailwind css, react components, restaurant'
+const pageTitle = 'Café Premium Copán | Café de Especialidad de Honduras'
+const pageDescription = 'Descubre el mejor café de altura de Copán. Granos 100% hondureños, tostado artesanal con notas de chocolate y cítricos. Envíos a todo Honduras.'
+const pageKeywords = 'café de copán, café hondureño, café de especialidad, granos premium, café artesanal, suscripción café'
 
-// Structured data for better SEO
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'Bistro - Restaurant Landing Page',
+  '@type': 'Product',
+  name: 'Café Premium Copán',
   description: pageDescription,
-  applicationCategory: 'DeveloperApplication',
-  operatingSystem: 'Any',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'USD'
-  },
-  author: {
-    '@type': 'Organization',
-    name: 'Your Company Name'
-  }
+  brand: { '@type': 'Brand', name: 'Café Premium Copán' },
+  offers: { '@type': 'Offer', price: '7.99', priceCurrency: 'USD' },
+  author: { '@type': 'Organization', name: 'Café Premium Copán' }
 }
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
-  <HeroSectionPage menudata={menudata} client:load />
-  <PopularDishes popularDishes={popularDishes} client:load />
-  <AboutUs stats={stats} />
-  <Testimonials testimonials={testimonials} client:load />
-  <NewItems newItems={newItems} />
-  <ContactUs contactInfo={contactInfo} />
-  <Offers galleryImage={GalleryImage} />
+
+  {/* SECCIÓN 1: INICIO */}
+  <section id="inicio">
+    <HeroSectionPage menudata={menudata} client:load />
+  </section>
+
+  {/* SECCIÓN 2: NUESTRAS FINCAS */}
+  <section id="fincas">
+    <AboutUs stats={stats} />
+  </section>
+
+  {/* SECCIÓN 3: CATÁLOGO - GRANOS */}
+  <section id="granos">
+    <PopularDishes
+      popularDishes={granos}
+      title="Granos de Especialidad"
+      subtitle="Café en grano seleccionado de las mejores fincas de Copán"
+      client:load
+    />
+  </section>
+
+  {/* SECCIÓN 4: CATÁLOGO - MOLIENDAS */}
+  <section id="moliendas">
+    <PopularDishes
+      popularDishes={moliendas}
+      title="Moliendas"
+      subtitle="Café molido listo para preparar según tu método favorito"
+      client:load
+    />
+  </section>
+
+  {/* SECCIÓN 5: CATÁLOGO - POR ORIGEN */}
+  <section id="origenes">
+    <PopularDishes
+      popularDishes={popularDishes}
+      title="Por Origen"
+      subtitle="Explora toda nuestra selección de cafés hondureños"
+      client:load
+    />
+  </section>
+
+  {/* SECCIÓN 11: CALCULADORA */}
+<section id="calculadora">
+  <ShippingCalculator client:load />
+</section>
+
+  {/* SECCIÓN 6: EDICIONES ESPECIALES */}
+  <section id="ediciones">
+    <PopularDishes
+      popularDishes={edicionesEspeciales}
+      title="Ediciones Limitadas"
+      subtitle="Lotes exclusivos de cosecha limitada con badge y precio especial"
+      client:load
+    />
+  </section>
+
+  {/* SECCIÓN 6: DISTRIBUIDORES */}
+<section id="distribuidores">
+  <Distribuidores client:load />
+</section>
+
+  {/* SECCIÓN 8: SUSCRIPCIÓN CAFETERA */}
+  <section id="suscripcion">
+    <SubscriptionSection client:load />
+  </section>
+
+  {/* SECCIÓN 9: CONTACTO */}
+  <section id="contacto">
+    <ContactUs contactInfo={contactInfo} />
+  </section>
+
 </Layout>
